@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class poll(models.Model):
-   subject = models.CharField("投票主題"max_length=200)
+   subject = models.CharField(max_length=200)
    created = models.DateField(auto_now_add=True)
 
    def __str__(self):
@@ -13,5 +13,5 @@ class Option(models.Model):
    title = models.CharField(max_length=200)
    count = models.IntegerField(default=0)
 
-    def __str__(self):
+   def __str__(self):
         return str(self.poll_id) + ":" +str(self.poll_id)+")"+ self.title
