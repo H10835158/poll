@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+ <h1>{{poll.subject}}</h1>
+ <div>{{poll,created}}</div>
+<ul>
+    {% for opt in option%}
+    {% for opt.title %} - {{ opt.count }}三</li>
+</ul>
+{% endblock %}
+
+{% block page_title %}
+檢視投票主題
+{% endblock %}
